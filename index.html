@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title>Online Basic Calculator</title>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css"/>    
+</head>
+<body>
+    <script>
+        function calcNumbers(result){
+        form.displayResult.value=form.displayResult.value+result;
+        
+        }
+        function clearscreen(result){
+            form.displayResult.value="";
+        }
+    </script>
+    <h1>CALCULATOR</h1>
+    <div class="container">
+        <form name="form">
+        <div style="margin-top: 5px;">
+            <input type="text" id=""placeholder="0" name="displayResult">
+        </div>
+        <div class="button">
+            <div class="row">
+                <input type="button" name="abrac" id=special value="(" style="font-size: 25px;" onclick="calcNumbers(abrac.value)">
+                <input type="button" name="bbrac" id=special value=")" style="font-size: 25px;" onclick="calcNumbers(bbrac.value)">
+                <input type="button" name="exp" id=special value="^" onclick="calcNumbers('**')">
+                <input type="button" name="log" id=special value="log" style="font-size: medium;" onclick="displayResult
+                .value=eval(Math.log10(displayResult.value))">            
+                <input type="button" value="C" id=special  onclick="clearscreen()">
+            </div>
+            <div class="row">
+                <input type="button" name="b7" value="7" onclick="calcNumbers(b7.value)">
+                <input type="button" name="b8" value="8" onclick="calcNumbers(b8.value)">
+                <input type="button" name="b9" value="9" onclick="calcNumbers(b9.value)">
+                <input type="button" name="mod" id=special value="%" style="font-size: 25px;" onclick="calcNumbers(mod.value)">
+                <input type="button" name="sqrt" id=special value="&radic;" style="font-size: 30px;" onclick="displayResult
+                .value=eval(Math.sqrt(displayResult.value))">
+            </div>
+            <div class="row">
+                <input type="button" name="b4" value="4" onclick="calcNumbers(b4.value)">
+                <input type="button" name="b5" value="5" onclick="calcNumbers(b5.value)">
+                <input type="button" name="b6" value="6" onclick="calcNumbers(b6.value)">
+                <input type="button" name="mul" id=special value="&times;" onclick="calcNumbers('*')">
+                <input type="button" name="div" id=special value="&divide;" onclick="calcNumbers('/')">
+            </div>
+            <div class="row">
+                <input type="button" name="b1" value="1" onclick="calcNumbers(b1.value)">
+                <input type="button" name="b2" value="2" onclick="calcNumbers(b2.value)">
+                <input type="button" name="b3" value="3" onclick="calcNumbers(b3.value)">
+                <input type="button" name="add" id=special value="+" onclick="calcNumbers(add.value)">
+                <input type="button" name="subb" id=special value="-" onclick="calcNumbers(subb.value)">
+            </div>
+            <div class="row">
+                <input type="button" name="pow" id=special value="e" onclick="calcNumbers(2.71828)">                
+                <input type="button" name="b0" value="0" onclick="calcNumbers(b0.value)">
+                <input type="button" name="dot" value="." onclick="calcNumbers(dot.value)">
+                <input type="button" value="=" style="background-color: red; width: 100px; border-radius: 8%;" onclick="displayResult
+                .value=eval(displayResult.value)">
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
